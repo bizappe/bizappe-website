@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EULA & Privacy Policy - Bizappe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            filter: drop-shadow(0 2px 4px rgba(102, 126, 234, 0.3));
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .hero-small {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 8rem 5% 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-small::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: moveBackground 20s linear infinite;
+        }
+
+        @keyframes moveBackground {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .hero-small h1 {
+            position: relative;
+            z-index: 1;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-small p {
+            position: relative;
+            z-index: 1;
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 5%;
+        }
+
+        .legal-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .legal-header h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .legal-header .date {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .important-notice {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+        .important-notice h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .important-notice p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .section h3 {
+            font-size: 1.4rem;
+            color: #667eea;
+            margin: 2rem 0 1rem;
+        }
+
+        .section h4 {
+            font-size: 1.2rem;
+            color: #555;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .section p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .section ul {
+            list-style: none;
+            margin-left: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .section ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .section ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .acceptance-box {
+            background: #f8f9fa;
+            border: 2px solid #667eea;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .acceptance-box p {
+            font-weight: 600;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.8;
+        }
+
+        .link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .link:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #1a1a2e;
+            color: white;
+            text-align: center;
+            padding: 2rem 5%;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .hero-small h1 {
+                font-size: 2rem;
+            }
+
+            .hero-small p {
+                font-size: 1rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .section h3 {
+                font-size: 1.2rem;
+            }
+
+            .content-section {
+                padding: 3rem 5%;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🚀</span>
+                <span>Bizappe</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#why-choose-us">Why Us</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero-small">
+        <h1>End User License Agreement</h1>
+        <p>For Bizappe Apps on the Atlassian Marketplace</p>
+    </div>
+
+    <div class="content-section">
+        <div class="legal-header">
+            <h2>EULA and Privacy Policy</h2>
+            <p class="date">Effective Date: Jan 10, 2026</p>
+        </div>
+
+        <div class="important-notice">
+            <h3>Important Information</h3>
+            <p>Bizappe adopts the Bonterms Standard Agreement for Marketplace Transactions (Version 1.0) as the primary End User License Agreement ("EULA") for all Bizappe applications published on the Atlassian Marketplace at: <a href="https://marketplace.atlassian.com" class="link">https://marketplace.atlassian.com</a></p>
+            <p>This standardized agreement provides a clear and balanced legal framework designed to simplify licensing and ensure consistency for users of Bizappe software.</p>
+            <p>In addition, Bizappe includes Provider-Specific Terms (outlined below) to address requirements and policies specific to Bizappe's products and services.</p>
+        </div>
+
+        <div class="section">
+            <h2>Agreement Overview</h2>
+            <p>This End User License Agreement ("Agreement" or "EULA") is a legally binding contract governing your use of Bizappe's software applications ("App" or "Apps") made available through the Bizappe vendor account on the Atlassian Marketplace.</p>
+            <p>This Agreement consists of:</p>
+            <ul>
+                <li>The Bonterms Standard Agreement for Marketplace Transactions (Version 1.0), and</li>
+                <li>Bizappe's Provider-Specific Terms</li>
+            </ul>
+            <p>Together, these documents define the rights, obligations, and limitations applicable to you ("Customer," "User," or "you") and Bizappe ("Provider," "we," "us," or "our").</p>
+            <p>A reference copy of the Bonterms Standard Agreement for Marketplace Transactions (Version 1.0) may be accessed or downloaded via Bonterms or through a mirror hosted by Bizappe.</p>
+        </div>
+
+        <div class="section">
+            <h2>Acceptance of Terms</h2>
+            <div class="acceptance-box">
+                <p>BY DOWNLOADING, INSTALLING, ACCESSING, OR USING ANY BIZAPPE APP, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREED TO BE BOUND BY THIS AGREEMENT.</p>
+            </div>
+            <p>If you do not agree to the terms of this Agreement, including the Provider-Specific Terms, you must not download, install, access, or use the App. Continued use of the App constitutes acceptance of these terms.</p>
+            <p>If you have any questions regarding this Agreement, please contact Bizappe prior to installing or using the App.</p>
+        </div>
+
+        <div class="section">
+            <h2>Bizappe Provider-Specific Terms</h2>
+            
+            <h3>1. License Grant; Scope of Use</h3>
+            <p>Bizappe grants you a limited, non-exclusive, non-transferable, revocable license to download, install, and use the App solely for your internal business purposes, subject to the terms of this Agreement.</p>
+            <p>This license permits you to access and use the App in accordance with:</p>
+            <ul>
+                <li>The documentation provided by Bizappe, and</li>
+                <li>The functionality and usage limits described on the Atlassian Marketplace listing.</li>
+            </ul>
+
+            <h4>1.1 Restrictions on Use</h4>
+            <p>You may not, directly or indirectly:</p>
+            <ul>
+                <li>Sell, sublicense, lease, rent, or distribute the App to any third party</li>
+                <li>Reverse engineer, decompile, disassemble, or attempt to derive the App's source code</li>
+                <li>Modify the App or create derivative works without prior written authorization from Bizappe</li>
+                <li>Circumvent, bypass, or interfere with any security or access controls</li>
+                <li>Use the App for unlawful purposes, High-Risk Activities, or to transmit malware or harmful code</li>
+                <li>Submit sensitive personal data unless expressly permitted under the Provider-Specific Terms</li>
+            </ul>
+            <p>Failure to comply with these restrictions may result in suspension or termination of your license.</p>
+
+            <h4>1.2 Purchases via Authorized Resellers</h4>
+            <p>This EULA applies regardless of whether you acquire Bizappe Products directly from Bizappe, through the Atlassian Marketplace, a partner marketplace, an Authorized Reseller, or any other approved distribution channel.</p>
+            <p>If you purchase a license through an Authorized Reseller:</p>
+            <ul>
+                <li>Your permitted scope of use will be defined by the applicable order form</li>
+                <li>The Authorized Reseller is responsible for the accuracy of order details</li>
+                <li>Authorized Resellers are not permitted to make additional warranties, commitments, or representations on behalf of Bizappe. Bizappe is not bound by any obligations beyond those expressly stated in this Agreement.</li>
+            </ul>
+            <p>For questions regarding licenses purchased through resellers, please refer to this EULA or contact Bizappe directly.</p>
+
+            <h3>2. Data Protection Addendum (DPA)</h3>
+            <p>Bizappe is committed to safeguarding Customer Data in accordance with applicable data protection laws.</p>
+            <p>By accepting this EULA, you also agree to Bizappe's Data Protection Addendum (DPA), which governs the processing, use, and protection of Customer Data.</p>
+            <p>Bizappe's DPA aligns with and incorporates the Bonterms Data Protection Addendum by reference. The DPA applies automatically upon acceptance of this Agreement and outlines Bizappe's obligations related to data security, confidentiality, and lawful data handling.</p>
+
+            <h3>3. Security Measures</h3>
+            <p>Bizappe implements robust technical and organizational safeguards to protect Customer Data against unauthorized access, disclosure, or misuse.</p>
+            <p>Bizappe maintains security controls consistent with recognized industry standards to ensure data integrity and confidentiality.</p>
+
+            <h4>3.1 Contact Form Information</h4>
+            <p>Any personal information submitted through Bizappe contact forms is used solely for communication purposes. Bizappe does not share this information with third parties or process it beyond the scope of the original inquiry.</p>
+
+            <h3>4. Disclaimer</h3>
+            <p>Except as expressly stated in this Agreement or required by applicable law, Bizappe provides its Products and related services "as is" and "as available", without warranties of any kind, whether express, implied, statutory, or otherwise.</p>
+            <p>Bizappe expressly disclaims all implied warranties, including but not limited to warranties of merchantability, fitness for a particular purpose, title, and non-infringement.</p>
+            <p>Bizappe does not warrant that the Products will be uninterrupted, error-free, fully secure, or meet all Customer requirements. To the maximum extent permitted by law, Bizappe is not liable for delays, failures, data loss, or damages arising from use of the Products, except as expressly stated in this Agreement.</p>
+            <p>Bonterms, as the publisher of the Standard Agreement, is not a party to this Agreement and bears no responsibility for its enforcement or interpretation.</p>
+
+            <h3>5. Language</h3>
+            <p>This Agreement is written in English, which shall be the controlling language in all respects. Any translations are provided solely for convenience and are not legally binding.</p>
+            <p>All notices, communications, documentation, and support provided under this Agreement shall be conducted in English unless otherwise stated.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Bizappe. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Header background on scroll
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.style.padding = '1rem 5%';
+            } else {
+                header.style.padding = '1.5rem 5%';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+/* Japanese-specific font override */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+}
+
+/* Japanese text tends to be longer, so adjust hero heading size */
+.hero h1 {
+    font-size: 3.5rem !important;
+    line-height: 1.3 !important;
+}
+
+.hero p {
+    font-size: 1.3rem !important;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .hero p {
+        font-size: 1rem !important;
+    }
+}

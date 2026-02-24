@@ -396,12 +396,80 @@ h2 {
 footer {
     background: #1a1a2e;
     color: white;
-    text-align: center;
-    padding: 2rem 5%;
+    padding: 4rem 5% 0;
 }
 
-footer p {
-    opacity: 0.8;
+.footer-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand {
+    flex: 0 0 auto;
+    min-width: 200px;
+}
+
+.footer-brand .logo {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.footer-brand p {
+    opacity: 0.6;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 240px;
+}
+
+.footer-links {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3rem;
+}
+
+.footer-links-column h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 1rem;
+}
+
+.footer-links-column ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.footer-links-column a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links-column a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    opacity: 0.45;
+    font-size: 0.85rem;
 }
 
 @media (max-width: 768px) {
@@ -454,6 +522,19 @@ footer p {
 
     .nav-links a::after {
         display: none;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-links {
+        gap: 2rem;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
     }
 }
 

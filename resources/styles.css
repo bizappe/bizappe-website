@@ -229,8 +229,10 @@ h2 {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
+    max-width: 860px;
+    margin: 0 auto;
 }
 
 .service-card {
@@ -267,6 +269,14 @@ h2 {
 .service-icon {
     font-size: 3rem;
     margin-bottom: 1.5rem;
+}
+
+.service-icon-img {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+    object-fit: contain;
 }
 
 .service-card h3 {
